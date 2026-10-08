@@ -1,11 +1,10 @@
 //! gray-review — `/review` and `/simplify` over the working-tree git diff.
 //!
-//! Port of pi-simplify (MIT) plus a reimplementation of mitsupi's `/review`
-//! (behavior only — the upstream is proprietary). Both commands return a
-//! `{prompt}` result: the host runs it as a user prompt, so the agent does
-//! the actual review/simplification. `/review` embeds the raw `git diff`
-//! output (head+tail capped at ~30k chars); `/simplify` lists the changed
-//! files with their changed line ranges, keeping edits surgical.
+//! Both commands return a `{prompt}` result: the host runs it as a user
+//! prompt, so the agent does the actual review/simplification. `/review`
+//! embeds the raw `git diff` output (head+tail capped at ~30k chars);
+//! `/simplify` lists changed files with changed line ranges, keeping edits
+//! surgical.
 //!
 //! Outside a git repo (or when git fails) the commands return `{text}` with
 //! an error line instead of a prompt.

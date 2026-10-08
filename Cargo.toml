@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 rust-version = "1.91"
 license = "MIT"
-description = "Review or simplify changed code via /review and /simplify prompts (pi-simplify + mitsupi review port)"
+description = "Review or simplify the current git diff with focused prompts"
 
 [[bin]]
 name = "gray-review"
