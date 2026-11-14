@@ -22,7 +22,7 @@ fn manifest() -> Value {
         "version": env!("CARGO_PKG_VERSION"),
         "protocol": "1.1",
         "tools": [],
-        "description": "review",
+        "description": "review or simplify the current diff",
         "commands": ["/review", "/simplify"],
     })
 }
