@@ -24,6 +24,10 @@ fn manifest() -> Value {
         "tools": [],
         "description": "review or simplify the current diff",
         "commands": ["/review", "/simplify"],
+        "command_descriptions": {
+            "/review": "review the working-tree git diff",
+            "/simplify": "simplify the changed code",
+        },
     })
 }
 
