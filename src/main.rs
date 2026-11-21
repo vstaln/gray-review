@@ -250,11 +250,11 @@ fn parse_changed_lines(diff: &str) -> Vec<(u32, u32)> {
             continue;
         }
         let end = start + count - 1;
-        if let Some(last) = ranges.last_mut() {
-            if start <= last.1 + 1 {
-                last.1 = last.1.max(end);
-                continue;
-            }
+        if let Some(last) = ranges.last_mut()
+            && start <= last.1 + 1
+        {
+            last.1 = last.1.max(end);
+            continue;
         }
         ranges.push((start, end));
     }
